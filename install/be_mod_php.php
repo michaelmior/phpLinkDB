@@ -1,0 +1,1 @@
+<?php function module_php ($step) { if (preg_match("/^[0-9]*/",$_REQUEST['step'])) { include_once($_REQUEST['step'].'_step.php');} return array( 'description'=> $return,'processtext'=> FALSE,'processurl'=> FALSE,'processdisabled'=> FALSE );} ?>

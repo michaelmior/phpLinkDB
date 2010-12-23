@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<title>{config_NAME} - BuildExec Wizard</title>
+<style type="text/css">
+FORM { margin: 0px }
+DIV.main { width: 500px; border: 1px solid #CCCCCC }
+DIV.statusbar { background-color: #F6F6F7; font-family: tahoma; font-size: 8pt; color: #3C3C3C; text-align: left; font-weight: bold; padding: 3px }
+DIV.header { vertical-align: middle; border-top: 3px solid #7998C9; border-bottom: 3px solid #7998C9; padding: 5px; text-align: left;  background-image: url(images/header.gif); height: 70px }
+SPAN.header { font-family: tahoma; font-size: 13pt; font-weight: bold; color: #336699 }
+DIV.description { padding: 10px; font-family: tahoma; font-size: 8pt; text-align: left }
+DIV.sponsorline { padding-left: 8px; padding-top: 2px; height: 20px; background-image: url(images/sponsorline.gif); text-align: left }
+SPAN.sponsorline { padding: 3px; padding-bottom: 0px; font-family: tahoma; font-size: 8pt; color: #CCCCCC; background-color: #FFFFFF }
+DIV.proceed { text-align: right }
+INPUT.proceed { margin: 10px; margin-top: 2px; border: 1px solid #CCCCCC; background-color: #F6F6F7; font-family: verdana; font-size: 8pt; font-weight: bold }
+INPUT { border: 1px solid #CCCCCC; background-color: #F6F6F7; font-family: verdana; font-size: 8pt }
+TEXTAREA { border: 1px solid #CCCCCC; background-color: #F6F6F7; font-family: verdana; font-size: 8pt }
+TD { font-family: tahoma; font-size: 8pt; text-align: left }
+A.sponsorlink { color: #CCCCCC; text-decoration: none; font-family: tahoma; font-size: 8pt }
+A.sponsorlink:hover { text-decoration: underline }
+</style>
+</head>
+
+<body>
+<div style="text-align: center">
+<center>
+    <form method="post">
+	<div class="main">
+		<div class="statusbar">{config_NAME} {config_VERSION}</div>
+		<div class="header"><table cellpadding="0" cellspacing="0"><tr><td style="height: 70px"><span class="header">{step_NAME}</span></td></tr></table></div>
+		<div class="description">{step_DESCRIPTION}</div>
+		<div class="sponsorline"><span class="sponsorline"><a href="http://www.buildexec.com" class="sponsorlink"><!--ONLY PREMIUM ACCOUNTS ARE ALLOWED TO REMOVE THIS LINK-->BuildExec</a></span></div>
+		<div class="proceed"><input type="hidden" name="step" value="{process_URL}" /><input class="proceed" type="submit" name="submit" value="{process_TEXT}" {process_DISABLED}/></div>
+	</div>
+	</form>
+</center>
+</div>
+</body>
+
+</html>

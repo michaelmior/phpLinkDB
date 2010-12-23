@@ -1,0 +1,233 @@
+@charset "utf-8";
+html {
+	overflow-y: scroll; /* fix to always show scrollbars and prevent jumps */
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #476c5e;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+.main #container {
+	width: 46em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #b8ecd7;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: justify; /* this overrides the text-align: center on the body element. */
+}
+.main #header { 
+	float: left;
+	background: #b1e001; 
+	padding: 0 10px 0 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.main #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+	color: #083643;
+	float: left;
+}
+.main #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #cef09d;
+	padding-top: 150px;
+	padding-bottom: 10px;
+}
+.main #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#083643;
+} 
+.main #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	color: #ffffff;
+	font-size: 10pt;
+	text-align: center;
+}
+.main  a {
+	color: #083643;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+	font-weight: bold;
+}
+.main a:hover {
+	border-bottom: solid;
+}
+.main #mainContent a img {
+	border-bottom: none;
+}
+#categoryTable {
+	font-size: 14pt;
+}
+.dimmed {
+	color: #596646;
+}
+.small {
+	font-size: 0.75em;
+}
+.main #topRight {
+	float: right;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.main #topRight #user {
+	font-size: 10pt;
+}
+
+.main input {
+	background-color: #b8ecd7;
+	margin: 3px 0;
+}
+.linkTitle {
+	font-weight: bold;
+}
+.linkDescription {
+	text-indent: 2em;
+}
+.link {
+	border-width: 1px;
+	border-style: dashed;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+hr {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EEE;
+}
+
+/* Form styles */
+fieldset {
+	border-style: dotted;
+	border-color: #000;
+	border-width: 1px 0;
+}
+
+label {
+	float: left;
+	display: block;
+	text-align: right;
+	width: 100px;
+	margin: 5px 10px 5px 0;
+}
+
+.error {
+	font-size: 0.7em;
+	color: #F00;
+}
+
+/* Correction to remove border on boomark links */
+#addthis_dropdown a {
+	border-style: none;
+}
+
+/* Styles for AJAX star rating - mooRate */
+.star-rating,
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus,
+.star-rating .current-rating{
+	background: url(images/star.gif) left -1000px repeat-x;
+}
+.star-rating{
+	position:relative;
+	width:125px;
+	height:25px;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-position: left top;
+}
+.star-rating li{
+	display: inline;
+}
+.star-rating a, 
+.star-rating .current-rating{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	overflow:hidden;
+	border: none;
+}
+.star-rating a:hover,
+.star-rating a:active,
+.star-rating a:focus{
+	background-position: left bottom;
+}
+.star-rating a.one-star{
+	width:20%;
+	z-index:6;
+}
+.star-rating a.two-stars{
+	width:40%;
+	z-index:5;
+}
+.star-rating a.three-stars{
+	width:60%;
+	z-index:4;
+}
+.star-rating a.four-stars{
+	width:80%;
+	z-index:3;
+}
+.star-rating a.five-stars{
+	width:100%;
+	z-index:2;
+}
+.star-rating .current-rating{
+	z-index:1;
+	background-position: left center;
+}	
+
+/* for an inline rater */
+.inline-rating{
+	display:-moz-inline-block;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+/* smaller star */
+.small-star{
+	width:50px;
+	height:10px;
+}
+.small-star,
+.small-star a:hover,
+.small-star a:active,
+.small-star a:focus,
+.small-star .current-rating{
+	background-image: url(images/star_small.gif);
+	line-height: 10px;
+	height: 10px;
+}
+
+.tool-tip {
+	color: #fff;
+	width: 200px;
+	z-index: 13000;
+}
+.tool-title {
+	font-weight: bold;
+	font-size: 11px;
+	margin: 0;
+	color: #e6102f;
+	padding: 8px 8px 4px;
+	background: #000;
+}
+ 
+.tool-text {
+	font-size: 11px;
+	padding: 4px 8px 8px;
+	background: #000;
+}

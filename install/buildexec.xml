@@ -1,0 +1,34 @@
+<buildexec>
+<step>
+            <name>Server Test</name>
+            <description>Please ensure that you are running an Apache server with minimum PHP 4.</description>
+            <type>server_check</type>
+            <arguments>YToyOntzOjM6InBocCI7czoxOiI0IjtzOjY6ImFwYWNoZSI7czoyOiJPTiI7fQ==</arguments>
+            <extra>null</extra>
+        </step>
+        <step>
+            <name>Conifguration Test</name>
+            <description>Please ensure that the configuration file is writable by the web server user.
+
+Also note if you wish to use error logging, the file error.log should be writeable.  To enable logging, comment in the following line in config.php:
+
+//require_once('error.php');</description>
+            <type>chmod_check</type>
+            <arguments>YToxOntzOjEzOiIuLi9jb25maWcueG1sIjtzOjk6IndyaXRlYWJsZSI7fQ==</arguments>
+            <extra>null</extra>
+        </step>
+        <step>
+            <name>Configuration</name>
+            <description>Please create a database for use exclusively by phpLinkDB.</description>
+            <type>config_generate</type>
+            <arguments>YTo1OntzOjg6InRlbXBsYXRlIjtzOjIzNToiPD94bWwgdmVyc2lvbj1cXFwiMS4wXFxcIj8+DQo8Y29uZmlnZGF0YT4NCgk8c2l0ZVRpdGxlPntmaWVsZF9zaXRlVGl0bGV9PC9zaXRlVGl0bGU+DQoJPGRiSG9zdD57ZmllbGRfZGJIb3N0fTwvZGJIb3N0Pg0KCTxkYlVzZXI+e2ZpZWxkX2RiVXNlcn08L2RiVXNlcj4NCgk8ZGJQYXNzPntmaWVsZF9kYlBhc3N9PC9kYlBhc3M+DQoJPGRiTmFtZT57ZmllbGRfZGJOYW1lfTwvZGJOYW1lPg0KPC9jb25maWdkYXRhPiI7czo4OiJmaWxlbmFtZSI7czoxMDoiY29uZmlnLnhtbCI7czo5OiJkaXJlY3RvcnkiO3M6MzoiLi4vIjtzOjE4OiJ1cGxvYWRpbnN0cnVjdGlvbnMiO3M6MDoiIjtzOjY6ImZpZWxkcyI7YTo1OntpOjA7YTo0OntzOjQ6InR5cGUiO3M6NDoidGV4dCI7czo0OiJuYW1lIjtzOjk6InNpdGVUaXRsZSI7czo3OiJkZWZhdWx0IjtzOjk6InBocExpbmtEQiI7czo0OiJoZWxwIjtzOjEwOiJTaXRlIFRpdGxlIjt9aToxO2E6NDp7czo0OiJ0eXBlIjtzOjQ6InRleHQiO3M6NDoibmFtZSI7czo2OiJkYkhvc3QiO3M6NzoiZGVmYXVsdCI7czo5OiJsb2NhbGhvc3QiO3M6NDoiaGVscCI7czoxMzoiRGF0YWJhc2UgSG9zdCI7fWk6MjthOjQ6e3M6NDoidHlwZSI7czo0OiJ0ZXh0IjtzOjQ6Im5hbWUiO3M6NjoiZGJVc2VyIjtzOjc6ImRlZmF1bHQiO3M6NDoicm9vdCI7czo0OiJoZWxwIjtzOjEzOiJEYXRhYmFzZSBVc2VyIjt9aTozO2E6NDp7czo0OiJ0eXBlIjtzOjg6InBhc3N3b3JkIjtzOjQ6Im5hbWUiO3M6NjoiZGJQYXNzIjtzOjc6ImRlZmF1bHQiO3M6MDoiIjtzOjQ6ImhlbHAiO3M6MTc6IkRhdGFiYXNlIFBhc3N3b3JkIjt9aTo0O2E6NDp7czo0OiJ0eXBlIjtzOjQ6InRleHQiO3M6NDoibmFtZSI7czo2OiJkYk5hbWUiO3M6NzoiZGVmYXVsdCI7czo5OiJwaHBsaW5rZGIiO3M6NDoiaGVscCI7czoxMzoiRGF0YWJhc2UgTmFtZSI7fX19</arguments>
+            <extra>null</extra>
+        </step>
+        <step>
+            <name>Table Creation</name>
+            <description>The installer will now create the necessary tables in your database.</description>
+            <type>sql_dump</type>
+            <arguments>YTo1OntzOjY6ImRiaG9zdCI7czo2OiJkYkhvc3QiO3M6NjoiZGJuYW1lIjtzOjY6ImRiTmFtZSI7czo2OiJkYnVzZXIiO3M6NjoiZGJVc2VyIjtzOjY6ImRicGFzcyI7czo2OiJkYlBhc3MiO3M6NzoidmVyc2lvbiI7czo0OiIzLjIzIjt9</arguments>
+            <extra>null</extra>
+        </step>
+        </buildexec>
